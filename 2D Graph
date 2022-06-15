@@ -1,0 +1,22 @@
+#include<graphics.h>
+#include<math.h>
+#include<conio.h>
+#include<iostream>
+using namespace std;
+
+int main() {
+    initwindow(800,600);
+    int x, y;
+    line(0,300,getmaxx(),300);
+    line(400,0,400,getmaxy());
+    float pi = 3.1415;
+    for(int i = -360; i <= 360; i++){
+
+           x = (int)400 + i;
+           y = (int)300 - sin(i*pi/100)*25;
+           putpixel( x,y, WHITE);
+    }
+           getch();
+           closegraph();
+           return 0;
+}
